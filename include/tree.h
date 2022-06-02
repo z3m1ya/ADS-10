@@ -36,8 +36,7 @@ void constructTree(Node* root, std::vector<char> path) {
       if (*i == root->value) {
         path.erase(i);
         break;
-      }
-     else {
+      } else {
       j--;
      }
   }
