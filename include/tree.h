@@ -31,12 +31,15 @@ void constructTree(Node* root, std::vector<char> path) {
   }
   if (root->value != '*') {
     size_t j = 0;
-    for (size_t i = path.begin(); i != path.end(); i++) {
+    for (auto i = path.begin(); i != path.end(); i++) {
       j++;
       if (*i == root->value) {
         path.erase(i);
         break;
       }
+     else {
+      j--;
+     }
   }
   }
   for (size_t i = 0; i < path.size(); ++i) {
